@@ -1,0 +1,34 @@
+{
+  "name": "ngx-if-platform",
+  "version": "0.0.4",
+  "author": {
+    "name": "Dominik Hladík",
+    "email": "dominik.hladik@seznam.cz",
+    "url": "https://github.com/Celtian"
+  },
+  "private": false,
+  "license": "MIT",
+  "description": "Angular directive for repeating HTML element by count",
+  "dependencies": {
+    "tslib": "^2.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "homepage": "https://github.com/Celtian/ngx-if-platform",
+  "repository": {
+    "url": "git+https://github.com/Celtian/ngx-if-platform.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/Celtian/ngx-if-platform/issues"
+  },
+  "keywords": [
+    "angular",
+    "ngx",
+    "platform"
+  ],
+  "engines": {
+    "node": ">=10"
+  }
+}
