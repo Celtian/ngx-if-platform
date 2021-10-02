@@ -1,20 +1,20 @@
 import { PLATFORM_ID } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { NgxPlatformModule } from './ngx-if-platform.module';
-import { NgxPlatformService } from './ngx-if-platform.service';
+import { NgxIfPlatformModule } from './ngx-if-platform.module';
+import { NgxIfPlatformService } from './ngx-if-platform.service';
 
-describe('NgxPlatformService', () => {
+describe('NgxIfPlatformService', () => {
   describe('browser', () => {
-    let service: NgxPlatformService;
+    let service: NgxIfPlatformService;
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [NgxPlatformModule],
+        imports: [NgxIfPlatformModule],
         providers: [
           { provide: PLATFORM_ID, useValue: 'browser' }
         ]
       });
-      service = TestBed.inject(NgxPlatformService);
+      service = TestBed.inject(NgxIfPlatformService);
     });
 
     it('should be created', () => {
@@ -30,16 +30,16 @@ describe('NgxPlatformService', () => {
   });
 
   describe('server', () => {
-    let service: NgxPlatformService;
+    let service: NgxIfPlatformService;
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [NgxPlatformModule],
+        imports: [NgxIfPlatformModule],
         providers: [
           { provide: PLATFORM_ID, useValue: 'server' }
         ]
       });
-      service = TestBed.inject(NgxPlatformService);
+      service = TestBed.inject(NgxIfPlatformService);
     });
 
     it('should be created', () => {
@@ -55,16 +55,16 @@ describe('NgxPlatformService', () => {
   });
 
   describe('workerApp', () => {
-    let service: NgxPlatformService;
+    let service: NgxIfPlatformService;
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [NgxPlatformModule],
+        imports: [NgxIfPlatformModule],
         providers: [
           { provide: PLATFORM_ID, useValue: 'browserWorkerApp' }
         ]
       });
-      service = TestBed.inject(NgxPlatformService);
+      service = TestBed.inject(NgxIfPlatformService);
     });
 
     it('should be created', () => {
@@ -80,16 +80,16 @@ describe('NgxPlatformService', () => {
   });
 
   describe('workerUi', () => {
-    let service: NgxPlatformService;
+    let service: NgxIfPlatformService;
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [NgxPlatformModule],
+        imports: [NgxIfPlatformModule],
         providers: [
           { provide: PLATFORM_ID, useValue: 'browserWorkerUi' }
         ]
       });
-      service = TestBed.inject(NgxPlatformService);
+      service = TestBed.inject(NgxIfPlatformService);
     });
 
     it('should be created', () => {

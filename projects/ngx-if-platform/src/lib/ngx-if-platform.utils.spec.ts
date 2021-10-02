@@ -1,6 +1,6 @@
 import { coerceBooleanProperty } from './ngx-if-platform.utils';
 
-describe('NgxPlatformUtils', () => {
+describe('NgxIfPlatformUtils', () => {
   describe('coerceBooleanProperty', () => {
     it('should validate undefined and return false', () => {
       expect(coerceBooleanProperty(undefined)).toBe(false);

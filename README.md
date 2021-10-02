@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/Celtian/ngx-if-platform" target="blank"><img src="assets/logo.svg?sanitize=true" alt="" width="120"></a>
-  <h1 align="center">NgxPlatform</h1>
+  <h1 align="center">NgxIfPlatform</h1>
 </p>
 
 [![npm version](https://badge.fury.io/js/ngx-if-platform.svg)](https://badge.fury.io/js/ngx-if-platform)
@@ -30,16 +30,16 @@ Here's the [demo](http://celtian.github.io/ngx-if-platform/) or [stackblitz live
 yarn add ngx-if-platform
 ```
 
-2. Add NgxPlatformModule into your module `imports`
+2. Add NgxIfPlatformModule into your module `imports`
 
 ```typescript
-  import { NgxPlatformModule } from 'ngx-if-platform';
+  import { NgxIfPlatformModule } from 'ngx-if-platform';
 
   @NgModule({
    // ...
    imports: [
      // ...
-     NgxPlatformModule
+     NgxIfPlatformModule
    ]
   })
 ```

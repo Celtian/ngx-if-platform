@@ -2,7 +2,7 @@ import { isPlatformBrowser, isPlatformServer, isPlatformWorkerApp, isPlatformWor
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 
 @Injectable()
-export class NgxPlatformService {
+export class NgxIfPlatformService {
   constructor(@Inject(PLATFORM_ID) protected platformId: any) {}
 
   public get isServer(): boolean {

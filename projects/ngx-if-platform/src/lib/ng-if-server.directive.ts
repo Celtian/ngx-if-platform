@@ -1,6 +1,6 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 import { NgIfAbstractDirective } from './ng-if-abstract.directive';
-import { NgxPlatformService } from './ngx-if-platform.service';
+import { NgxIfPlatformService } from './ngx-if-platform.service';
 
 @Directive({
   selector: '[ngIfServer]'
@@ -18,7 +18,7 @@ export class NgIfServerDirective extends NgIfAbstractDirective {
   constructor(
     protected templateRef: TemplateRef<any>,
     protected viewContainer: ViewContainerRef,
-    private platformService: NgxPlatformService
+    private platformService: NgxIfPlatformService
   ) {
     super(templateRef, viewContainer);
   }

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { NgxPlatformModule } from 'projects/ngx-if-platform/src/public-api';
+import { NgxIfPlatformModule } from 'projects/ngx-if-platform/src/public-api';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -12,7 +12,7 @@ describe('AppComponent', () => {
         AppComponent
       ],
       imports: [
-        NgxPlatformModule
+        NgxIfPlatformModule
       ]
     }).compileComponents();
 
