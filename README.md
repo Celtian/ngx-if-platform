@@ -16,7 +16,7 @@
 
 > ✓ _Angular 12, Ivy and SSR compatible_
 
-Here's the [demo](http://celtian.github.io/ngx-if-platform/) or [stackblitz live preview](https://stackblitz.com/edit/ngx-if-platform)
+Here's the [demo](http://celtian.github.io/ngx-if-platform/) or ~~[stackblitz live preview](https://stackblitz.com/edit/ngx-if-platform)~~ or [codesandbox live preview](https://codesandbox.io/s/ngx-if-platform-dgtck)
 
 - Lightweight
 - No dependencies!
