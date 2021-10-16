@@ -55,7 +55,7 @@ yarn add ngx-if-platform
 <ng-template [ngIfServer]="true">Is server (disabled)</ng-template>
 <!-- ngIf else statement  -->
 <ng-template [ngIfServer] [ngIfNotServer]="notServer">Is server</ng-template>
-<ng-template>Not server</ng-template>
+<ng-template #notServer>Not server</ng-template>
 ```
 
 ### Result
