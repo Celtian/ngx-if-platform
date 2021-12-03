@@ -46,10 +46,10 @@ yarn add ngx-if-platform
 
 ## Compatibility
 
-| Angular   | ngx-if-platform | Install                        |
-| --------- | --------------- | ------------------------------ |
-| >= 12     | 1.x             | `yarn add ngx-translate-cut`   |
-| >= 5 < 13 | 0.x             | `yarn add ngx-translate-cut@0` |
+| Angular   | ngx-if-platform | Install                      |
+| --------- | --------------- | ---------------------------- |
+| >= 12     | 1.x             | `yarn add ngx-if-platform`   |
+| >= 5 < 13 | 0.x             | `yarn add ngx-if-platform@0` |
 
 ## Quick start
 
