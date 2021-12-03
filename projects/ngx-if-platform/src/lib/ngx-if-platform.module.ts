@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { NgIfBrowserDirective } from './ng-if-browser.directive';
-import { NgIfServerDirective } from './ng-if-server.directive';
-import { NgIfWorkerAppDirective } from './ng-if-worker-app.directive';
-import { NgIfWorkerUiDirective } from './ng-if-worker-ui.directive';
+import { NgxIfBrowserDirective } from './ngx-if-browser.directive';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
+import { NgxIfServerDirective } from './ngx-if-server.directive';
+import { NgxIfWorkerAppDirective } from './ngx-if-worker-app.directive';
+import { NgxIfWorkerUiDirective } from './ngx-if-worker-ui.directive';
 
 @NgModule({
-  declarations: [NgIfBrowserDirective, NgIfServerDirective, NgIfWorkerAppDirective, NgIfWorkerUiDirective],
-  exports: [NgIfBrowserDirective, NgIfServerDirective, NgIfWorkerAppDirective, NgIfWorkerUiDirective],
+  declarations: [NgxIfBrowserDirective, NgxIfServerDirective, NgxIfWorkerAppDirective, NgxIfWorkerUiDirective],
+  exports: [NgxIfBrowserDirective, NgxIfServerDirective, NgxIfWorkerAppDirective, NgxIfWorkerUiDirective],
   providers: [NgxIfPlatformService]
 })
 export class NgxIfPlatformModule {}

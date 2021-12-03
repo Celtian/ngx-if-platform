@@ -1,18 +1,18 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import { NgIfAbstractDirective } from './ng-if-abstract.directive';
+import { NgxIfAbstractDirective } from './ngx-if-abstract.directive';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
 
 @Directive({
-  selector: '[ngIfServer]'
+  selector: '[ngxIfServer]'
 })
-export class NgIfServerDirective extends NgIfAbstractDirective {
-  @Input('ngIfServer') public set ngIf(enabled: any) {
-    super.ngIf = enabled;
+export class NgxIfServerDirective extends NgxIfAbstractDirective {
+  @Input() public set ngxIfServer(enabled: any) {
+    this.setIf(enabled);
   }
 
-  @Input('ngIfNotServer')
-  public set ngIfNot(temp: TemplateRef<any>) {
-    super.ngIfNot = temp;
+  @Input()
+  public set ngxIfNotServer(temp: TemplateRef<any>) {
+    this.setIfNot(temp);
   }
 
   constructor(
