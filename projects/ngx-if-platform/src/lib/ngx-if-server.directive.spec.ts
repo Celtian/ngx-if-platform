@@ -1,18 +1,18 @@
 import { Component, PLATFORM_ID, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgIfServerDirective } from './ng-if-server.directive';
 import { NgxIfPlatformModule } from './ngx-if-platform.module';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
+import { NgxIfServerDirective } from './ngx-if-server.directive';
 
-describe('NgIfServerDirective', () => {
+describe('NgxIfServerDirective', () => {
   describe('inline style', () => {
     @Component({
       template: `
-      <div *ngIfServer>Is server</div>
+      <div *ngxIfServer>Is server</div>
     `
     })
     class TestDirectiveComponent {
-      @ViewChild(NgIfServerDirective) public directive: NgIfServerDirective;
+      @ViewChild(NgxIfServerDirective) public directive: NgxIfServerDirective;
     }
 
     let fixture: ComponentFixture<TestDirectiveComponent>;
@@ -43,7 +43,7 @@ describe('NgIfServerDirective', () => {
     });
 
     it('should create an instance', () => {
-      const directive = new NgIfServerDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfServerDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
   });
@@ -51,12 +51,12 @@ describe('NgIfServerDirective', () => {
   describe('template style', () => {
     @Component({
       template: `
-    <ng-template [ngIfServer]="enabled" [ngIfNotServer]="notServer">Is server</ng-template>
+    <ng-template [ngxIfServer]="enabled" [ngxIfNotServer]="notServer">Is server</ng-template>
     <ng-template #notServer>Is not server</ng-template>
   `
     })
     class TestDirectiveComponent {
-      @ViewChild(NgIfServerDirective) public directive: NgIfServerDirective;
+      @ViewChild(NgxIfServerDirective) public directive: NgxIfServerDirective;
       public enabled = true;
     }
 
@@ -88,7 +88,7 @@ describe('NgIfServerDirective', () => {
     });
 
     it('should create an instance', () => {
-      const directive = new NgIfServerDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfServerDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
 
@@ -96,7 +96,7 @@ describe('NgIfServerDirective', () => {
       const component = fixture.componentInstance;
       component.enabled = false;
       fixture.detectChanges();
-      const directive = new NgIfServerDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfServerDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
   });
@@ -104,12 +104,12 @@ describe('NgIfServerDirective', () => {
   describe('template style which do not match', () => {
     @Component({
       template: `
-        <ng-template [ngIfServer]="enabled" [ngIfNotServer]="notServer">Is server</ng-template>
+        <ng-template [ngxIfServer]="enabled" [ngxIfNotServer]="notServer">Is server</ng-template>
         <ng-template #notServer>Is not server</ng-template>
       `
     })
     class TestDirectiveComponent {
-      @ViewChild(NgIfServerDirective) public directive: NgIfServerDirective;
+      @ViewChild(NgxIfServerDirective) public directive: NgxIfServerDirective;
       public enabled = true;
     }
 
@@ -141,7 +141,7 @@ describe('NgIfServerDirective', () => {
     });
 
     it('should create an instance', () => {
-      const directive = new NgIfServerDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfServerDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
 
@@ -149,7 +149,7 @@ describe('NgIfServerDirective', () => {
       const component = fixture.componentInstance;
       component.enabled = false;
       fixture.detectChanges();
-      const directive = new NgIfServerDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfServerDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
   });

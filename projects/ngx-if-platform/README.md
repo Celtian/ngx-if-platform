@@ -14,9 +14,9 @@
 
 > Angular directive for conditional display based on platform
 
-> ✓ _Angular 12, Ivy and SSR compatible_
+> ✓ _Angular 13, Ivy and SSR compatible_
 
-Here's the [demo](http://celtian.github.io/ngx-if-platform/) or ~~[stackblitz live preview](https://stackblitz.com/edit/ngx-if-platform)~~ or [codesandbox live preview](https://codesandbox.io/s/ngx-if-platform-dgtck)
+Here's the [demo](http://celtian.github.io/ngx-if-platform/) or [stackblitz live preview](https://stackblitz.com/edit/ngx-if-platform) or [codesandbox live preview](https://codesandbox.io/s/ngx-if-platform-dgtck)
 
 - Lightweight
 - No dependencies!
@@ -44,17 +44,24 @@ yarn add ngx-if-platform
   })
 ```
 
+## Compatibility
+
+| Angular   | ngx-if-platform | Install                      |
+| --------- | --------------- | ---------------------------- |
+| >= 12     | 1.x             | `yarn add ngx-if-platform`   |
+| >= 5 < 13 | 0.x             | `yarn add ngx-if-platform@0` |
+
 ## Quick start
 
 ### Example code
 
 ```html
-<!-- ngIf -->
-<div *ngIfBrowser>Is browser</div>
-<!-- ngIf can be disabled  -->
-<ng-template [ngIfServer]="true">Is server (disabled)</ng-template>
-<!-- ngIf else statement  -->
-<ng-template [ngIfServer] [ngIfNotServer]="notServer">Is server</ng-template>
+<!-- ngxIf -->
+<div *ngxIfBrowser>Is browser</div>
+<!-- ngxIf can be disabled  -->
+<ng-template [ngxIfServer]="true">Is server (disabled)</ng-template>
+<!-- ngxIf else statement  -->
+<ng-template [ngxIfServer] [ngxIfNotServer]="notServer">Is server</ng-template>
 <ng-template #notServer>Not server</ng-template>
 ```
 
@@ -68,20 +75,20 @@ yarn add ngx-if-platform
 
 ## Options
 
-There are these directives: ngIfBrowser, ngIfServer, ngIfWorkerApp, ngIfWorkerUi
+There are these directives: ngxIfBrowser, ngxIfServer, ngxIfWorkerApp, ngxIfWorkerUi
 
 ### Directive & attributes
 
-| Option                 | Type        | Default | Description                                |
-| ---------------------- | ----------- | ------- | ------------------------------------------ |
-| **[ngIfBrowser]**      | boolean     | true    | Directive can be disabled                  |
-| **[ngIfNotBrowser]**   | templateRef | none    | TemplateRef used if confition do not match |
-| **[ngIfServer]**       | boolean     | true    | Directive can be disabled                  |
-| **[ngIfNotServer]**    | templateRef | none    | TemplateRef used if confition do not match |
-| **[ngIfWorkerApp]**    | boolean     | true    | Directive can be disabled                  |
-| **[ngIfNotWorkerApp]** | templateRef | none    | TemplateRef used if confition do not match |
-| **[ngIfWorkerUi]**     | boolean     | true    | Directive can be disabled                  |
-| **[ngIfNotWorkerUi]**  | templateRef | none    | TemplateRef used if confition do not match |
+| Option                  | Type        | Default | Description                                |
+| ----------------------- | ----------- | ------- | ------------------------------------------ |
+| **[ngxIfBrowser]**      | boolean     | true    | Directive can be disabled                  |
+| **[ngxIfNotBrowser]**   | templateRef | none    | TemplateRef used if confition do not match |
+| **[ngxIfServer]**       | boolean     | true    | Directive can be disabled                  |
+| **[ngxIfNotServer]**    | templateRef | none    | TemplateRef used if confition do not match |
+| **[ngxIfWorkerApp]**    | boolean     | true    | Directive can be disabled                  |
+| **[ngxIfNotWorkerApp]** | templateRef | none    | TemplateRef used if confition do not match |
+| **[ngxIfWorkerUi]**     | boolean     | true    | Directive can be disabled                  |
+| **[ngxIfNotWorkerUi]**  | templateRef | none    | TemplateRef used if confition do not match |
 
 ## Dependencies
 

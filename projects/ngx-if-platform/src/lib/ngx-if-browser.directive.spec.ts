@@ -1,18 +1,18 @@
 import { Component, PLATFORM_ID, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgIfBrowserDirective } from './ng-if-browser.directive';
+import { NgxIfBrowserDirective } from './ngx-if-browser.directive';
 import { NgxIfPlatformModule } from './ngx-if-platform.module';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
 
-describe('NgIfBrowserDirective', () => {
+describe('NgxIfBrowserDirective', () => {
   describe('inline style', () => {
     @Component({
       template: `
-      <div *ngIfBrowser>Is browser</div>
+      <div *ngxIfBrowser>Is browser</div>
     `
     })
     class TestDirectiveComponent {
-      @ViewChild(NgIfBrowserDirective) public directive: NgIfBrowserDirective;
+      @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
     }
 
     let fixture: ComponentFixture<TestDirectiveComponent>;
@@ -43,7 +43,7 @@ describe('NgIfBrowserDirective', () => {
     });
 
     it('should create an instance', () => {
-      const directive = new NgIfBrowserDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfBrowserDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
   });
@@ -51,12 +51,12 @@ describe('NgIfBrowserDirective', () => {
   describe('template style', () => {
     @Component({
       template: `
-      <ng-template [ngIfBrowser]="enabled" [ngIfNotBrowser]="notBrowser">Is browser</ng-template>
+      <ng-template [ngxIfBrowser]="enabled" [ngxIfNotBrowser]="notBrowser">Is browser</ng-template>
       <ng-template #notBrowser>Is not browser</ng-template>
     `
     })
     class TestDirectiveComponent {
-      @ViewChild(NgIfBrowserDirective) public directive: NgIfBrowserDirective;
+      @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
       public enabled = true;
     }
 
@@ -88,7 +88,7 @@ describe('NgIfBrowserDirective', () => {
     });
 
     it('should create an instance', () => {
-      const directive = new NgIfBrowserDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfBrowserDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
 
@@ -96,7 +96,7 @@ describe('NgIfBrowserDirective', () => {
       const component = fixture.componentInstance;
       component.enabled = false;
       fixture.detectChanges();
-      const directive = new NgIfBrowserDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfBrowserDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
   });
@@ -104,12 +104,12 @@ describe('NgIfBrowserDirective', () => {
   describe('template style which do not match', () => {
     @Component({
       template: `
-        <ng-template [ngIfBrowser]="enabled" [ngIfNotBrowser]="notBrowser">Is browser</ng-template>
+        <ng-template [ngxIfBrowser]="enabled" [ngxIfNotBrowser]="notBrowser">Is browser</ng-template>
         <ng-template #notBrowser>Is not browser</ng-template>
       `
     })
     class TestDirectiveComponent {
-      @ViewChild(NgIfBrowserDirective) public directive: NgIfBrowserDirective;
+      @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
       public enabled = true;
     }
 
@@ -141,7 +141,7 @@ describe('NgIfBrowserDirective', () => {
     });
 
     it('should create an instance', () => {
-      const directive = new NgIfBrowserDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfBrowserDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
 
@@ -149,7 +149,7 @@ describe('NgIfBrowserDirective', () => {
       const component = fixture.componentInstance;
       component.enabled = false;
       fixture.detectChanges();
-      const directive = new NgIfBrowserDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfBrowserDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
   });

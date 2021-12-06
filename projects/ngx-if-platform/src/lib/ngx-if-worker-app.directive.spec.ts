@@ -1,18 +1,18 @@
 import { Component, PLATFORM_ID, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NgIfWorkerUiDirective } from './ng-if-worker-ui.directive';
 import { NgxIfPlatformModule } from './ngx-if-platform.module';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
+import { NgxIfWorkerAppDirective } from './ngx-if-worker-app.directive';
 
-describe('NgIfWorkerUiDirective', () => {
+describe('NgxIfWorkerAppDirective', () => {
   describe('inline style', () => {
     @Component({
       template: `
-      <div *ngIfWorkerUi>Is worker ui</div>
+      <div *ngxIfWorkerApp>Is worker app</div>
     `
     })
     class TestDirectiveComponent {
-      @ViewChild(NgIfWorkerUiDirective) public directive: NgIfWorkerUiDirective;
+      @ViewChild(NgxIfWorkerAppDirective) public directive: NgxIfWorkerAppDirective;
     }
 
     let fixture: ComponentFixture<TestDirectiveComponent>;
@@ -35,7 +35,7 @@ describe('NgIfWorkerUiDirective', () => {
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
           { provide: NgxIfPlatformService, useValue: platformService },
-          { provide: PLATFORM_ID, useValue: 'browserWorkerUi' },
+          { provide: PLATFORM_ID, useValue: 'browserWorkerApp' },
         ]
       }).createComponent(TestDirectiveComponent);
 
@@ -43,7 +43,7 @@ describe('NgIfWorkerUiDirective', () => {
     });
 
     it('should create an instance', () => {
-      const directive = new NgIfWorkerUiDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfWorkerAppDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
 
@@ -52,12 +52,12 @@ describe('NgIfWorkerUiDirective', () => {
   describe('template style', () => {
     @Component({
       template: `
-        <ng-template [ngIfWorkerUi]="enabled" [ngIfNotWorkerUi]="notWorkerUi">Is worker ui</ng-template>
-        <ng-template #notWorkerUi>Is not worker ui</ng-template>
-      `
+      <ng-template [ngxIfWorkerApp]="enabled" [ngxIfNotWorkerApp]="notWorkerApp">Is worker app</ng-template>
+      <ng-template #notWorkerApp>Is not worker app</ng-template>
+    `
     })
     class TestDirectiveComponent {
-      @ViewChild(NgIfWorkerUiDirective) public directive: NgIfWorkerUiDirective;
+      @ViewChild(NgxIfWorkerAppDirective) public directive: NgxIfWorkerAppDirective;
       public enabled = true;
     }
 
@@ -81,7 +81,7 @@ describe('NgIfWorkerUiDirective', () => {
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
           { provide: NgxIfPlatformService, useValue: platformService },
-          { provide: PLATFORM_ID, useValue: 'browserWorkerUi' },
+          { provide: PLATFORM_ID, useValue: 'browserWorkerApp' },
         ]
       }).createComponent(TestDirectiveComponent);
 
@@ -89,7 +89,7 @@ describe('NgIfWorkerUiDirective', () => {
     });
 
     it('should create an instance', () => {
-      const directive = new NgIfWorkerUiDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfWorkerAppDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
 
@@ -97,7 +97,7 @@ describe('NgIfWorkerUiDirective', () => {
       const component = fixture.componentInstance;
       component.enabled = false;
       fixture.detectChanges();
-      const directive = new NgIfWorkerUiDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfWorkerAppDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
   });
@@ -105,12 +105,12 @@ describe('NgIfWorkerUiDirective', () => {
   describe('template style which do not match', () => {
     @Component({
       template: `
-        <ng-template [ngIfWorkerUi]="enabled" [ngIfNotWorkerUi]="notWorkerUi">Is worker ui</ng-template>
-        <ng-template #notWorkerUi>Is not worker ui</ng-template>
+        <ng-template [ngxIfWorkerApp]="enabled" [ngxIfNotWorkerApp]="notWorkerApp">Is worker app</ng-template>
+        <ng-template #notWorkerApp>Is not worker app</ng-template>
       `
     })
     class TestDirectiveComponent {
-      @ViewChild(NgIfWorkerUiDirective) public directive: NgIfWorkerUiDirective;
+      @ViewChild(NgxIfWorkerAppDirective) public directive: NgxIfWorkerAppDirective;
       public enabled = true;
     }
 
@@ -142,7 +142,7 @@ describe('NgIfWorkerUiDirective', () => {
     });
 
     it('should create an instance', () => {
-      const directive = new NgIfWorkerUiDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfWorkerAppDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
 
@@ -150,7 +150,7 @@ describe('NgIfWorkerUiDirective', () => {
       const component = fixture.componentInstance;
       component.enabled = false;
       fixture.detectChanges();
-      const directive = new NgIfWorkerUiDirective(templateRef, viewContainer, platformService);
+      const directive = new NgxIfWorkerAppDirective(templateRef, viewContainer, platformService);
       expect(directive).toBeTruthy();
     });
   });

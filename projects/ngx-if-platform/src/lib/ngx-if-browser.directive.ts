@@ -1,18 +1,18 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import { NgIfAbstractDirective } from './ng-if-abstract.directive';
+import { NgxIfAbstractDirective } from './ngx-if-abstract.directive';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
 
 @Directive({
-  selector: '[ngIfWorkerApp]'
+  selector: '[ngxIfBrowser]'
 })
-export class NgIfWorkerAppDirective extends NgIfAbstractDirective {
-  @Input('ngIfWorkerApp') public set ngIf(enabled: any) {
-    super.ngIf = enabled;
+export class NgxIfBrowserDirective extends NgxIfAbstractDirective {
+  @Input() public set ngxIfBrowser(enabled: any) {
+    this.setIf(enabled);
   }
 
-  @Input('ngIfNotWorkerApp')
-  public set ngIfNot(temp: TemplateRef<any>) {
-    super.ngIfNot = temp;
+  @Input()
+  public set ngxIfNotBrowser(temp: TemplateRef<any>) {
+    this.setIfNot(temp);
   }
 
   constructor(
@@ -24,6 +24,6 @@ export class NgIfWorkerAppDirective extends NgIfAbstractDirective {
   }
 
   protected get shouldDisplay(): boolean {
-    return this.platformService.isWorkerApp;
+    return this.platformService.isBrowser;
   }
 }

@@ -1,18 +1,18 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
-import { NgIfAbstractDirective } from './ng-if-abstract.directive';
+import { NgxIfAbstractDirective } from './ngx-if-abstract.directive';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
 
 @Directive({
-  selector: '[ngIfWorkerUi]'
+  selector: '[ngxIfWorkerApp]'
 })
-export class NgIfWorkerUiDirective extends NgIfAbstractDirective {
-  @Input('ngIfWorkerUi') public set ngIf(enabled: any) {
-    super.ngIf = enabled;
+export class NgxIfWorkerAppDirective extends NgxIfAbstractDirective {
+  @Input() public set ngxIfWorkerApp(enabled: any) {
+    this.setIf(enabled);
   }
 
-  @Input('ngIfNotWorkerUi')
-  public set ngIfNot(temp: TemplateRef<any>) {
-    super.ngIfNot = temp;
+  @Input()
+  public set ngxIfNotWorkerApp(temp: TemplateRef<any>) {
+    this.setIfNot(temp);
   }
 
   constructor(
@@ -24,6 +24,6 @@ export class NgIfWorkerUiDirective extends NgIfAbstractDirective {
   }
 
   protected get shouldDisplay(): boolean {
-    return this.platformService.isWorkerUi;
+    return this.platformService.isWorkerApp;
   }
 }
