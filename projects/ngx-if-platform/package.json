@@ -10,7 +10,7 @@
   "license": "MIT",
   "description": "Angular directive for repeating HTML element by count",
   "dependencies": {
-    "tslib": "^2.2.0"
+    "tslib": "^2.4.0"
   },
   "peerDependencies": {
     "@angular/common": ">=12",
