@@ -14,7 +14,7 @@
 
 > Angular directive for conditional display based on platform
 
-> ✓ _Angular 13, Ivy and SSR compatible_
+> ✓ _Angular 15, Ivy and SSR compatible_
 
 Here's the [demo](http://celtian.github.io/ngx-if-platform/) or [stackblitz live preview](https://stackblitz.com/edit/ngx-if-platform) or [codesandbox live preview](https://codesandbox.io/s/ngx-if-platform-dgtck)
 
