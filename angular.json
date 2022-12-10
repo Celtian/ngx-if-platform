@@ -183,7 +183,8 @@
   },
   "cli": {
     "analytics": false,
-    "defaultCollection": "@angular-eslint/schematics"
-  },
-  "defaultProject": "ngx-if-platform"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
+  }
 }
