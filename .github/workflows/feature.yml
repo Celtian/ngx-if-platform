@@ -33,7 +33,7 @@ jobs:
             ${{ runner.OS }}-yarn-
             ${{ runner.OS }}-
 
-      - name: Install dependencies # Install all deps
+      - name: Install dependencies
         run: yarn
 
       - name: Sync versions # Sync versions
@@ -42,7 +42,7 @@ jobs:
       - name: Build demo app # Build Schematics and move
         run: yarn build:demo --base-href https://celtian.github.io/ngx-if-platform/
 
-      - name: Build ngx-if-platform # Build
+      - name: Build ngx-if-platform
         run: yarn build
 
       - name: Run tests
