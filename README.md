@@ -6,7 +6,7 @@
 [![npm version](https://badge.fury.io/js/ngx-if-platform.svg)](https://badge.fury.io/js/ngx-if-platform)
 [![Package License](https://img.shields.io/npm/l/ngx-if-platform.svg)](https://www.npmjs.com/ngx-if-platform)
 [![NPM Downloads](https://img.shields.io/npm/dm/ngx-if-platform.svg)](https://www.npmjs.com/ngx-if-platform)
-[![Build & Publish](https://github.com/celtian/ngx-if-platform/workflows/Build%20&%20Publish/badge.svg)](https://github.com/celtian/ngx-if-platform/actions)
+[![Snyk](https://snyk.io/advisor/npm-package/ngx-if-platform/badge.svg)](https://snyk.io/advisor/npm-package/ngx-if-platform)
 [![codecov](https://codecov.io/gh/Celtian/ngx-if-platform/branch/master/graph/badge.svg?token=1IRUKIKM0D)](https://codecov.io/gh/celtian/ngx-if-platform/)
 [![stars](https://badgen.net/github/stars/celtian/ngx-if-platform)](https://github.com/celtian/ngx-if-platform/)
 [![forks](https://badgen.net/github/forks/celtian/ngx-if-platform)](https://github.com/celtian/ngx-if-platform/)
