@@ -1,9 +1,5 @@
-name: Test feature branch
-
-on:
-  push:
-    branches:
-      - feat/*
+name: Test PR
+'on': pull_request
 
 jobs:
   install-and-test:
