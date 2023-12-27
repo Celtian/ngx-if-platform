@@ -3,7 +3,8 @@ import { NgxIfAbstractDirective } from './ngx-if-abstract.directive';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
 
 @Directive({
-  selector: '[ngxIfBrowser]'
+  selector: '[ngxIfBrowser]',
+  standalone: true
 })
 export class NgxIfBrowserDirective extends NgxIfAbstractDirective {
   @Input() public set ngxIfBrowser(enabled: any) {

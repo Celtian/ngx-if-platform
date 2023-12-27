@@ -6,7 +6,7 @@ import { NgxIfWorkerAppDirective } from './ngx-if-worker-app.directive';
 import { NgxIfWorkerUiDirective } from './ngx-if-worker-ui.directive';
 
 @NgModule({
-  declarations: [NgxIfBrowserDirective, NgxIfServerDirective, NgxIfWorkerAppDirective, NgxIfWorkerUiDirective],
+  imports: [NgxIfBrowserDirective, NgxIfServerDirective, NgxIfWorkerAppDirective, NgxIfWorkerUiDirective],
   exports: [NgxIfBrowserDirective, NgxIfServerDirective, NgxIfWorkerAppDirective, NgxIfWorkerUiDirective],
   providers: [NgxIfPlatformService]
 })

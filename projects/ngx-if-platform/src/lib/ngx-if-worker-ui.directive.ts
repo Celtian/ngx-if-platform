@@ -3,7 +3,8 @@ import { NgxIfAbstractDirective } from './ngx-if-abstract.directive';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
 
 @Directive({
-  selector: '[ngxIfWorkerUi]'
+  selector: '[ngxIfWorkerUi]',
+  standalone: true
 })
 export class NgxIfWorkerUiDirective extends NgxIfAbstractDirective {
   @Input() public set ngxIfWorkerUi(enabled: any) {

@@ -8,12 +8,7 @@ describe('AppComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
-      imports: [
-        NgxIfPlatformModule
-      ]
+      imports: [AppComponent, NgxIfPlatformModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
