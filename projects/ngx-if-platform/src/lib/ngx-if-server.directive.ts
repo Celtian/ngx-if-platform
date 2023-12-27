@@ -3,7 +3,8 @@ import { NgxIfAbstractDirective } from './ngx-if-abstract.directive';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
 
 @Directive({
-  selector: '[ngxIfServer]'
+  selector: '[ngxIfServer]',
+  standalone: true
 })
 export class NgxIfServerDirective extends NgxIfAbstractDirective {
   @Input() public set ngxIfServer(enabled: any) {

@@ -3,7 +3,8 @@ import { NgxIfAbstractDirective } from './ngx-if-abstract.directive';
 import { NgxIfPlatformService } from './ngx-if-platform.service';
 
 @Directive({
-  selector: '[ngxIfWorkerApp]'
+  selector: '[ngxIfWorkerApp]',
+  standalone: true
 })
 export class NgxIfWorkerAppDirective extends NgxIfAbstractDirective {
   @Input() public set ngxIfWorkerApp(enabled: any) {
