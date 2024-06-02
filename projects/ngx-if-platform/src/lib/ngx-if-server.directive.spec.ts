@@ -14,19 +14,27 @@ describe('NgxIfServerDirective', () => {
     }
 
     let fixture: ComponentFixture<TestDirectiveComponent>;
-    let templateRef: jasmine.SpyObj<TemplateRef<any>>;
-    let viewContainer: jasmine.SpyObj<ViewContainerRef>;
-    let platformService: jasmine.SpyObj<NgxIfPlatformService>;
+    let templateRef: jest.Mocked<TemplateRef<any>>;
+    let viewContainer: jest.Mocked<ViewContainerRef>;
+    let platformService: jest.Mocked<NgxIfPlatformService>;
 
     beforeEach(() => {
-      templateRef = jasmine.createSpyObj('TemplateRef<RepeatDirectiveContext>', ['elementRef', 'createEmbeddedView']);
-      viewContainer = jasmine.createSpyObj('ViewContainerRef', [
-        'length',
-        'remove',
-        'createEmbeddedView',
-        'createComponent'
-      ]);
-      platformService = jasmine.createSpyObj('NgxIfPlatformService', ['isServer', 'isBrowser']);
+      templateRef = {
+        elementRef: jest.fn(),
+        createEmbeddedView: jest.fn()
+      } as unknown as jest.Mocked<TemplateRef<any>>;
+
+      viewContainer = {
+        length: jest.fn(),
+        remove: jest.fn(),
+        createEmbeddedView: jest.fn(),
+        createComponent: jest.fn()
+      } as unknown as jest.Mocked<ViewContainerRef>;
+
+      platformService = {
+        isServer: jest.fn(),
+        isBrowser: jest.fn()
+      } as unknown as jest.Mocked<NgxIfPlatformService>;
 
       fixture = TestBed.configureTestingModule({
         imports: [NgxIfPlatformModule],
@@ -61,19 +69,27 @@ describe('NgxIfServerDirective', () => {
     }
 
     let fixture: ComponentFixture<TestDirectiveComponent>;
-    let templateRef: jasmine.SpyObj<TemplateRef<any>>;
-    let viewContainer: jasmine.SpyObj<ViewContainerRef>;
-    let platformService: jasmine.SpyObj<NgxIfPlatformService>;
+    let templateRef: jest.Mocked<TemplateRef<any>>;
+    let viewContainer: jest.Mocked<ViewContainerRef>;
+    let platformService: jest.Mocked<NgxIfPlatformService>;
 
     beforeEach(() => {
-      templateRef = jasmine.createSpyObj('TemplateRef<RepeatDirectiveContext>', ['elementRef', 'createEmbeddedView']);
-      viewContainer = jasmine.createSpyObj('ViewContainerRef', [
-        'length',
-        'remove',
-        'createEmbeddedView',
-        'createComponent'
-      ]);
-      platformService = jasmine.createSpyObj('NgxIfPlatformService', ['isServer', 'isBrowser']);
+      templateRef = {
+        elementRef: jest.fn(),
+        createEmbeddedView: jest.fn()
+      } as unknown as jest.Mocked<TemplateRef<any>>;
+
+      viewContainer = {
+        length: jest.fn(),
+        remove: jest.fn(),
+        createEmbeddedView: jest.fn(),
+        createComponent: jest.fn()
+      } as unknown as jest.Mocked<ViewContainerRef>;
+
+      platformService = {
+        isServer: jest.fn(),
+        isBrowser: jest.fn()
+      } as unknown as jest.Mocked<NgxIfPlatformService>;
 
       fixture = TestBed.configureTestingModule({
         imports: [NgxIfPlatformModule],
@@ -116,19 +132,27 @@ describe('NgxIfServerDirective', () => {
     }
 
     let fixture: ComponentFixture<TestDirectiveComponent>;
-    let templateRef: jasmine.SpyObj<TemplateRef<any>>;
-    let viewContainer: jasmine.SpyObj<ViewContainerRef>;
-    let platformService: jasmine.SpyObj<NgxIfPlatformService>;
+    let templateRef: jest.Mocked<TemplateRef<any>>;
+    let viewContainer: jest.Mocked<ViewContainerRef>;
+    let platformService: jest.Mocked<NgxIfPlatformService>;
 
     beforeEach(() => {
-      templateRef = jasmine.createSpyObj('TemplateRef<RepeatDirectiveContext>', ['elementRef', 'createEmbeddedView']);
-      viewContainer = jasmine.createSpyObj('ViewContainerRef', [
-        'length',
-        'remove',
-        'createEmbeddedView',
-        'createComponent'
-      ]);
-      platformService = jasmine.createSpyObj('NgxIfPlatformService', ['isServer', 'isBrowser']);
+      templateRef = {
+        elementRef: jest.fn(),
+        createEmbeddedView: jest.fn()
+      } as unknown as jest.Mocked<TemplateRef<any>>;
+
+      viewContainer = {
+        length: jest.fn(),
+        remove: jest.fn(),
+        createEmbeddedView: jest.fn(),
+        createComponent: jest.fn()
+      } as unknown as jest.Mocked<ViewContainerRef>;
+
+      platformService = {
+        isServer: jest.fn(),
+        isBrowser: jest.fn()
+      } as unknown as jest.Mocked<NgxIfPlatformService>;
 
       fixture = TestBed.configureTestingModule({
         imports: [NgxIfPlatformModule],
