@@ -10,8 +10,8 @@
   "license": "MIT",
   "description": "Angular directive for repeating HTML element by count",
   "peerDependencies": {
-    "@angular/common": ">=14",
-    "@angular/core": ">=14"
+    "@angular/common": ">=18",
+    "@angular/core": ">=18"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

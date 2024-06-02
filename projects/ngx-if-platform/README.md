@@ -92,16 +92,12 @@ There are these directives: ngxIfBrowser, ngxIfServer, ngxIfWorkerApp, ngxIfWork
 
 ### Directive & attributes
 
-| Option                  | Type        | Default | Description                                |
-| ----------------------- | ----------- | ------- | ------------------------------------------ |
-| **[ngxIfBrowser]**      | boolean     | true    | Directive can be disabled                  |
-| **[ngxIfNotBrowser]**   | templateRef | none    | TemplateRef used if confition do not match |
-| **[ngxIfServer]**       | boolean     | true    | Directive can be disabled                  |
-| **[ngxIfNotServer]**    | templateRef | none    | TemplateRef used if confition do not match |
-| **[ngxIfWorkerApp]**    | boolean     | true    | Directive can be disabled                  |
-| **[ngxIfNotWorkerApp]** | templateRef | none    | TemplateRef used if confition do not match |
-| **[ngxIfWorkerUi]**     | boolean     | true    | Directive can be disabled                  |
-| **[ngxIfNotWorkerUi]**  | templateRef | none    | TemplateRef used if confition do not match |
+| Option                | Type        | Default | Description                                |
+| --------------------- | ----------- | ------- | ------------------------------------------ |
+| **[ngxIfBrowser]**    | boolean     | true    | Directive can be disabled                  |
+| **[ngxIfNotBrowser]** | templateRef | none    | TemplateRef used if confition do not match |
+| **[ngxIfServer]**     | boolean     | true    | Directive can be disabled                  |
+| **[ngxIfNotServer]**  | templateRef | none    | TemplateRef used if confition do not match |
 
 ## Dependencies
 

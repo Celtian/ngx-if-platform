@@ -84,28 +84,21 @@ There are these directives: ngxIfBrowser, ngxIfServer, ngxIfWorkerApp, ngxIfWork
 
 ### Directive & attributes
 
-| Option                  | Type        | Default | Description                                |
-| ----------------------- | ----------- | ------- | ------------------------------------------ |
-| **[ngxIfBrowser]**      | boolean     | true    | Directive can be disabled                  |
-| **[ngxIfNotBrowser]**   | templateRef | none    | TemplateRef used if confition do not match |
-| **[ngxIfServer]**       | boolean     | true    | Directive can be disabled                  |
-| **[ngxIfNotServer]**    | templateRef | none    | TemplateRef used if confition do not match |
-| **[ngxIfWorkerApp]**    | boolean     | true    | Directive can be disabled                  |
-| **[ngxIfNotWorkerApp]** | templateRef | none    | TemplateRef used if confition do not match |
-| **[ngxIfWorkerUi]**     | boolean     | true    | Directive can be disabled                  |
-| **[ngxIfNotWorkerUi]**  | templateRef | none    | TemplateRef used if confition do not match |
+| Option                | Type        | Default | Description                                |
+| --------------------- | ----------- | ------- | ------------------------------------------ |
+| **[ngxIfBrowser]**    | boolean     | true    | Directive can be disabled                  |
+| **[ngxIfNotBrowser]** | templateRef | none    | TemplateRef used if confition do not match |
+| **[ngxIfServer]**     | boolean     | true    | Directive can be disabled                  |
+| **[ngxIfNotServer]**  | templateRef | none    | TemplateRef used if confition do not match |
 
-## Compatibility
+## 🔧 Compatibility
 
 | Angular   | ngx-if-platform | Install                      |
 | --------- | --------------- | ---------------------------- |
-| >= 14     | 2.x             | `yarn add ngx-if-platform`   |
+| >= 18     | 3.x             | `yarn add ngx-if-platform`   |
+| >= 14     | 2.x             | `yarn add ngx-if-platform@2` |
 | >= 12     | 1.x             | `yarn add ngx-if-platform@1` |
 | >= 5 < 13 | 0.x             | `yarn add ngx-if-platform@0` |
-
-## 📦 Dependencies
-
-_None_
 
 ## 🪪 License
 
