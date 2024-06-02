@@ -14,7 +14,7 @@
 
 > Angular directive for conditional display based on platform
 
-> ✓ _Angular 17 compatible_
+> ✓ _Angular 18 compatible_
 
 Here's the [demo](http://celtian.github.io/ngx-if-platform/) or [stackblitz live preview](https://stackblitz.com/edit/ngx-if-platform) or [codesandbox live preview](https://codesandbox.io/s/ngx-if-platform-dgtck)
 
@@ -22,7 +22,7 @@ Here's the [demo](http://celtian.github.io/ngx-if-platform/) or [stackblitz live
 - No dependencies!
 - Directive way
 
-## Install
+## 🛠️ Install
 
 1. Use yarn (or npm) to install the package
 
@@ -56,15 +56,7 @@ or
   })
 ```
 
-## Compatibility
-
-| Angular   | ngx-if-platform | Install                      |
-| --------- | --------------- | ---------------------------- |
-| >= 14     | 2.x             | `yarn add ngx-if-platform`   |
-| >= 12     | 1.x             | `yarn add ngx-if-platform@1` |
-| >= 5 < 13 | 0.x             | `yarn add ngx-if-platform@0` |
-
-## Quick start
+## 🚀 Quick start
 
 ### Example code
 
@@ -86,7 +78,7 @@ or
   Not server
 ```
 
-## Options
+## 🛠️ Options
 
 There are these directives: ngxIfBrowser, ngxIfServer, ngxIfWorkerApp, ngxIfWorkerUi
 
@@ -99,11 +91,16 @@ There are these directives: ngxIfBrowser, ngxIfServer, ngxIfWorkerApp, ngxIfWork
 | **[ngxIfServer]**     | boolean     | true    | Directive can be disabled                  |
 | **[ngxIfNotServer]**  | templateRef | none    | TemplateRef used if confition do not match |
 
-## Dependencies
+## 🔧 Compatibility
 
-_None_
+| Angular   | ngx-if-platform | Install                      |
+| --------- | --------------- | ---------------------------- |
+| >= 18     | 3.x             | `yarn add ngx-if-platform`   |
+| >= 14     | 2.x             | `yarn add ngx-if-platform@2` |
+| >= 12     | 1.x             | `yarn add ngx-if-platform@1` |
+| >= 5 < 13 | 0.x             | `yarn add ngx-if-platform@0` |
 
-## License
+## 🪪 License
 
 Copyright &copy; 2021 - 2024 [Dominik Hladik](https://github.com/Celtian)
 
