@@ -1,6 +1,5 @@
-import { ApplicationConfig, PLATFORM_ID, importProvidersFrom } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { ApplicationConfig, PLATFORM_ID, provideExperimentalZonelessChangeDetection } from '@angular/core';
 
 export const appConfig: ApplicationConfig = {
-  providers: [importProvidersFrom(BrowserModule), { provide: PLATFORM_ID, useValue: 'browser' }]
+  providers: [provideExperimentalZonelessChangeDetection(), { provide: PLATFORM_ID, useValue: 'browser' }]
 };
