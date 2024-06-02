@@ -10,9 +10,7 @@ describe('NgxIfPlatformService', () => {
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [NgxIfPlatformModule],
-        providers: [
-          { provide: PLATFORM_ID, useValue: 'browser' }
-        ]
+        providers: [{ provide: PLATFORM_ID, useValue: 'browser' }]
       });
       service = TestBed.inject(NgxIfPlatformService);
     });
@@ -24,8 +22,6 @@ describe('NgxIfPlatformService', () => {
     it('should return correct variables', () => {
       expect(service.isBrowser).toBe(true);
       expect(service.isServer).toBe(false);
-      expect(service.isWorkerApp).toBe(false);
-      expect(service.isWorkerUi).toBe(false);
     });
   });
 
@@ -35,9 +31,7 @@ describe('NgxIfPlatformService', () => {
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [NgxIfPlatformModule],
-        providers: [
-          { provide: PLATFORM_ID, useValue: 'server' }
-        ]
+        providers: [{ provide: PLATFORM_ID, useValue: 'server' }]
       });
       service = TestBed.inject(NgxIfPlatformService);
     });
@@ -49,58 +43,6 @@ describe('NgxIfPlatformService', () => {
     it('should return correct variables', () => {
       expect(service.isBrowser).toBe(false);
       expect(service.isServer).toBe(true);
-      expect(service.isWorkerApp).toBe(false);
-      expect(service.isWorkerUi).toBe(false);
-    });
-  });
-
-  describe('workerApp', () => {
-    let service: NgxIfPlatformService;
-
-    beforeEach(() => {
-      TestBed.configureTestingModule({
-        imports: [NgxIfPlatformModule],
-        providers: [
-          { provide: PLATFORM_ID, useValue: 'browserWorkerApp' }
-        ]
-      });
-      service = TestBed.inject(NgxIfPlatformService);
-    });
-
-    it('should be created', () => {
-      expect(service).toBeTruthy();
-    });
-
-    it('should return correct variables', () => {
-      expect(service.isBrowser).toBe(false);
-      expect(service.isServer).toBe(false);
-      expect(service.isWorkerApp).toBe(true);
-      expect(service.isWorkerUi).toBe(false);
-    });
-  });
-
-  describe('workerUi', () => {
-    let service: NgxIfPlatformService;
-
-    beforeEach(() => {
-      TestBed.configureTestingModule({
-        imports: [NgxIfPlatformModule],
-        providers: [
-          { provide: PLATFORM_ID, useValue: 'browserWorkerUi' }
-        ]
-      });
-      service = TestBed.inject(NgxIfPlatformService);
-    });
-
-    it('should be created', () => {
-      expect(service).toBeTruthy();
-    });
-
-    it('should return correct variables', () => {
-      expect(service.isBrowser).toBe(false);
-      expect(service.isServer).toBe(false);
-      expect(service.isWorkerApp).toBe(false);
-      expect(service.isWorkerUi).toBe(true);
     });
   });
 });

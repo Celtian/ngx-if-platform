@@ -7,9 +7,7 @@ import { NgxIfPlatformService } from './ngx-if-platform.service';
 describe('NgxIfBrowserDirective', () => {
   describe('inline style', () => {
     @Component({
-      template: `
-      <div *ngxIfBrowser>Is browser</div>
-    `
+      template: ` <div *ngxIfBrowser>Is browser</div> `
     })
     class TestDirectiveComponent {
       @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
@@ -21,12 +19,14 @@ describe('NgxIfBrowserDirective', () => {
     let platformService: jasmine.SpyObj<NgxIfPlatformService>;
 
     beforeEach(() => {
-      templateRef = jasmine.createSpyObj('TemplateRef<RepeatDirectiveContext>',
-        ['elementRef', 'createEmbeddedView']);
-      viewContainer = jasmine.createSpyObj('ViewContainerRef',
-        ['length', 'remove', 'createEmbeddedView', 'createComponent']);
-      platformService = jasmine.createSpyObj('NgxIfPlatformService',
-        ['isServer', 'isBrowser', 'isWorkerApp', 'isWorkerUi']);
+      templateRef = jasmine.createSpyObj('TemplateRef<RepeatDirectiveContext>', ['elementRef', 'createEmbeddedView']);
+      viewContainer = jasmine.createSpyObj('ViewContainerRef', [
+        'length',
+        'remove',
+        'createEmbeddedView',
+        'createComponent'
+      ]);
+      platformService = jasmine.createSpyObj('NgxIfPlatformService', ['isServer', 'isBrowser']);
 
       fixture = TestBed.configureTestingModule({
         imports: [NgxIfPlatformModule],
@@ -35,7 +35,7 @@ describe('NgxIfBrowserDirective', () => {
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
           { provide: NgxIfPlatformService, useValue: platformService },
-          { provide: PLATFORM_ID, useValue: 'browser' },
+          { provide: PLATFORM_ID, useValue: 'browser' }
         ]
       }).createComponent(TestDirectiveComponent);
 
@@ -51,9 +51,9 @@ describe('NgxIfBrowserDirective', () => {
   describe('template style', () => {
     @Component({
       template: `
-      <ng-template [ngxIfBrowser]="enabled" [ngxIfNotBrowser]="notBrowser">Is browser</ng-template>
-      <ng-template #notBrowser>Is not browser</ng-template>
-    `
+        <ng-template [ngxIfBrowser]="enabled" [ngxIfNotBrowser]="notBrowser">Is browser</ng-template>
+        <ng-template #notBrowser>Is not browser</ng-template>
+      `
     })
     class TestDirectiveComponent {
       @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
@@ -66,12 +66,14 @@ describe('NgxIfBrowserDirective', () => {
     let platformService: jasmine.SpyObj<NgxIfPlatformService>;
 
     beforeEach(() => {
-      templateRef = jasmine.createSpyObj('TemplateRef<RepeatDirectiveContext>',
-        ['elementRef', 'createEmbeddedView']);
-      viewContainer = jasmine.createSpyObj('ViewContainerRef',
-        ['length', 'remove', 'createEmbeddedView', 'createComponent']);
-      platformService = jasmine.createSpyObj('NgxIfPlatformService',
-        ['isServer', 'isBrowser', 'isWorkerApp', 'isWorkerUi']);
+      templateRef = jasmine.createSpyObj('TemplateRef<RepeatDirectiveContext>', ['elementRef', 'createEmbeddedView']);
+      viewContainer = jasmine.createSpyObj('ViewContainerRef', [
+        'length',
+        'remove',
+        'createEmbeddedView',
+        'createComponent'
+      ]);
+      platformService = jasmine.createSpyObj('NgxIfPlatformService', ['isServer', 'isBrowser']);
 
       fixture = TestBed.configureTestingModule({
         imports: [NgxIfPlatformModule],
@@ -80,7 +82,7 @@ describe('NgxIfBrowserDirective', () => {
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
           { provide: NgxIfPlatformService, useValue: platformService },
-          { provide: PLATFORM_ID, useValue: 'browser' },
+          { provide: PLATFORM_ID, useValue: 'browser' }
         ]
       }).createComponent(TestDirectiveComponent);
 
@@ -119,12 +121,14 @@ describe('NgxIfBrowserDirective', () => {
     let platformService: jasmine.SpyObj<NgxIfPlatformService>;
 
     beforeEach(() => {
-      templateRef = jasmine.createSpyObj('TemplateRef<RepeatDirectiveContext>',
-        ['elementRef', 'createEmbeddedView']);
-      viewContainer = jasmine.createSpyObj('ViewContainerRef',
-        ['length', 'remove', 'createEmbeddedView', 'createComponent']);
-      platformService = jasmine.createSpyObj('NgxIfPlatformService',
-        ['isServer', 'isBrowser', 'isWorkerApp', 'isWorkerUi']);
+      templateRef = jasmine.createSpyObj('TemplateRef<RepeatDirectiveContext>', ['elementRef', 'createEmbeddedView']);
+      viewContainer = jasmine.createSpyObj('ViewContainerRef', [
+        'length',
+        'remove',
+        'createEmbeddedView',
+        'createComponent'
+      ]);
+      platformService = jasmine.createSpyObj('NgxIfPlatformService', ['isServer', 'isBrowser']);
 
       fixture = TestBed.configureTestingModule({
         imports: [NgxIfPlatformModule],
@@ -133,7 +137,7 @@ describe('NgxIfBrowserDirective', () => {
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
           { provide: NgxIfPlatformService, useValue: platformService },
-          { provide: PLATFORM_ID, useValue: 'server' },
+          { provide: PLATFORM_ID, useValue: 'server' }
         ]
       }).createComponent(TestDirectiveComponent);
 
