@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, PLATFORM_ID, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxIfPlatformModule } from './ngx-if-platform.module';
@@ -7,7 +8,8 @@ import { NgxIfServerDirective } from './ngx-if-server.directive';
 describe('NgxIfServerDirective', () => {
   describe('inline style', () => {
     @Component({
-      template: ` <div *ngxIfServer>Is server</div> `
+      template: ` <div *ngxIfServer>Is server</div> `,
+      standalone: false
     })
     class TestDirectiveComponent {
       @ViewChild(NgxIfServerDirective) public directive: NgxIfServerDirective;
@@ -61,7 +63,8 @@ describe('NgxIfServerDirective', () => {
       template: `
         <ng-template [ngxIfServer]="enabled" [ngxIfNotServer]="notServer">Is server</ng-template>
         <ng-template #notServer>Is not server</ng-template>
-      `
+      `,
+      standalone: false
     })
     class TestDirectiveComponent {
       @ViewChild(NgxIfServerDirective) public directive: NgxIfServerDirective;
@@ -124,7 +127,8 @@ describe('NgxIfServerDirective', () => {
       template: `
         <ng-template [ngxIfServer]="enabled" [ngxIfNotServer]="notServer">Is server</ng-template>
         <ng-template #notServer>Is not server</ng-template>
-      `
+      `,
+      standalone: false
     })
     class TestDirectiveComponent {
       @ViewChild(NgxIfServerDirective) public directive: NgxIfServerDirective;

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 import { NgxIfAbstractDirective } from './ngx-if-abstract.directive';
 import { NgxIfPlatformService } from './ngx-if-platform.service';

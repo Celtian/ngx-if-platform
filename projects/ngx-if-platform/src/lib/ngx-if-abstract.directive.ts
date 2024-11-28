@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Directive, EmbeddedViewRef, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { coerceBooleanProperty } from './ngx-if-platform.utils';
 
@@ -8,7 +9,10 @@ export abstract class NgxIfAbstractDirective implements OnInit {
   protected ngxIfElseEmbededView: EmbeddedViewRef<any>;
   protected enabled = true;
 
-  constructor(protected templateRef: TemplateRef<any>, protected viewContainer: ViewContainerRef) {}
+  constructor(
+    protected templateRef: TemplateRef<any>,
+    protected viewContainer: ViewContainerRef
+  ) {}
 
   public ngOnInit(): void {
     this.updateView();

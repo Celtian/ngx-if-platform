@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, PLATFORM_ID, TemplateRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { NgxIfBrowserDirective } from './ngx-if-browser.directive';
@@ -7,7 +8,8 @@ import { NgxIfPlatformService } from './ngx-if-platform.service';
 describe('NgxIfBrowserDirective', () => {
   describe('inline style', () => {
     @Component({
-      template: ` <div *ngxIfBrowser>Is browser</div> `
+      template: ` <div *ngxIfBrowser>Is browser</div> `,
+      standalone: false
     })
     class TestDirectiveComponent {
       @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
@@ -61,7 +63,8 @@ describe('NgxIfBrowserDirective', () => {
       template: `
         <ng-template [ngxIfBrowser]="enabled" [ngxIfNotBrowser]="notBrowser">Is browser</ng-template>
         <ng-template #notBrowser>Is not browser</ng-template>
-      `
+      `,
+      standalone: false
     })
     class TestDirectiveComponent {
       @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
@@ -124,7 +127,8 @@ describe('NgxIfBrowserDirective', () => {
       template: `
         <ng-template [ngxIfBrowser]="enabled" [ngxIfNotBrowser]="notBrowser">Is browser</ng-template>
         <ng-template #notBrowser>Is not browser</ng-template>
-      `
+      `,
+      standalone: false
     })
     class TestDirectiveComponent {
       @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
