@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NgxIfPlatformModule } from 'projects/ngx-if-platform/src/public-api';
+import { NgxIfPlatformModule } from '../../../ngx-if-platform/src/public-api';
 import { VERSION } from '../environments/version';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrl: './app.component.css',
   standalone: true,
   imports: [NgxIfPlatformModule]
 })

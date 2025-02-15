@@ -9,10 +9,10 @@ describe('NgxIfBrowserDirective', () => {
   describe('inline style', () => {
     @Component({
       template: ` <div *ngxIfBrowser>Is browser</div> `,
-      standalone: false
+      imports: [NgxIfBrowserDirective]
     })
     class TestDirectiveComponent {
-      @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
+      @ViewChild(NgxIfBrowserDirective) public directive?: NgxIfBrowserDirective;
     }
 
     let fixture: ComponentFixture<TestDirectiveComponent>;
@@ -39,8 +39,7 @@ describe('NgxIfBrowserDirective', () => {
       } as unknown as jest.Mocked<NgxIfPlatformService>;
 
       fixture = TestBed.configureTestingModule({
-        imports: [NgxIfPlatformModule],
-        declarations: [TestDirectiveComponent],
+        imports: [NgxIfPlatformModule, TestDirectiveComponent],
         providers: [
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
@@ -64,10 +63,10 @@ describe('NgxIfBrowserDirective', () => {
         <ng-template [ngxIfBrowser]="enabled" [ngxIfNotBrowser]="notBrowser">Is browser</ng-template>
         <ng-template #notBrowser>Is not browser</ng-template>
       `,
-      standalone: false
+      imports: [NgxIfBrowserDirective]
     })
     class TestDirectiveComponent {
-      @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
+      @ViewChild(NgxIfBrowserDirective) public directive?: NgxIfBrowserDirective;
       public enabled = true;
     }
 
@@ -95,8 +94,7 @@ describe('NgxIfBrowserDirective', () => {
       } as unknown as jest.Mocked<NgxIfPlatformService>;
 
       fixture = TestBed.configureTestingModule({
-        imports: [NgxIfPlatformModule],
-        declarations: [TestDirectiveComponent],
+        imports: [NgxIfPlatformModule, TestDirectiveComponent],
         providers: [
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
@@ -128,10 +126,10 @@ describe('NgxIfBrowserDirective', () => {
         <ng-template [ngxIfBrowser]="enabled" [ngxIfNotBrowser]="notBrowser">Is browser</ng-template>
         <ng-template #notBrowser>Is not browser</ng-template>
       `,
-      standalone: false
+      imports: [NgxIfBrowserDirective]
     })
     class TestDirectiveComponent {
-      @ViewChild(NgxIfBrowserDirective) public directive: NgxIfBrowserDirective;
+      @ViewChild(NgxIfBrowserDirective) public directive?: NgxIfBrowserDirective;
       public enabled = true;
     }
 
@@ -159,8 +157,7 @@ describe('NgxIfBrowserDirective', () => {
       } as unknown as jest.Mocked<NgxIfPlatformService>;
 
       fixture = TestBed.configureTestingModule({
-        imports: [NgxIfPlatformModule],
-        declarations: [TestDirectiveComponent],
+        imports: [NgxIfPlatformModule, TestDirectiveComponent],
         providers: [
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },

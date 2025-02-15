@@ -4,9 +4,9 @@ import { coerceBooleanProperty } from './ngx-if-platform.utils';
 
 @Directive()
 export abstract class NgxIfAbstractDirective implements OnInit {
-  protected ngxIfElseTemplate: TemplateRef<any>;
-  protected ngxIfEmbededView: EmbeddedViewRef<any>;
-  protected ngxIfElseEmbededView: EmbeddedViewRef<any>;
+  protected ngxIfElseTemplate!: TemplateRef<any>;
+  protected ngxIfEmbededView!: EmbeddedViewRef<any>;
+  protected ngxIfElseEmbededView!: EmbeddedViewRef<any>;
   protected enabled = true;
 
   constructor(

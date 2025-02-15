@@ -9,10 +9,10 @@ describe('NgxIfServerDirective', () => {
   describe('inline style', () => {
     @Component({
       template: ` <div *ngxIfServer>Is server</div> `,
-      standalone: false
+      imports: [NgxIfServerDirective]
     })
     class TestDirectiveComponent {
-      @ViewChild(NgxIfServerDirective) public directive: NgxIfServerDirective;
+      @ViewChild(NgxIfServerDirective) public directive?: NgxIfServerDirective;
     }
 
     let fixture: ComponentFixture<TestDirectiveComponent>;
@@ -39,8 +39,7 @@ describe('NgxIfServerDirective', () => {
       } as unknown as jest.Mocked<NgxIfPlatformService>;
 
       fixture = TestBed.configureTestingModule({
-        imports: [NgxIfPlatformModule],
-        declarations: [TestDirectiveComponent],
+        imports: [NgxIfPlatformModule, TestDirectiveComponent],
         providers: [
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
@@ -64,10 +63,10 @@ describe('NgxIfServerDirective', () => {
         <ng-template [ngxIfServer]="enabled" [ngxIfNotServer]="notServer">Is server</ng-template>
         <ng-template #notServer>Is not server</ng-template>
       `,
-      standalone: false
+      imports: [NgxIfServerDirective]
     })
     class TestDirectiveComponent {
-      @ViewChild(NgxIfServerDirective) public directive: NgxIfServerDirective;
+      @ViewChild(NgxIfServerDirective) public directive?: NgxIfServerDirective;
       public enabled = true;
     }
 
@@ -95,8 +94,7 @@ describe('NgxIfServerDirective', () => {
       } as unknown as jest.Mocked<NgxIfPlatformService>;
 
       fixture = TestBed.configureTestingModule({
-        imports: [NgxIfPlatformModule],
-        declarations: [TestDirectiveComponent],
+        imports: [NgxIfPlatformModule, TestDirectiveComponent],
         providers: [
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
@@ -128,10 +126,10 @@ describe('NgxIfServerDirective', () => {
         <ng-template [ngxIfServer]="enabled" [ngxIfNotServer]="notServer">Is server</ng-template>
         <ng-template #notServer>Is not server</ng-template>
       `,
-      standalone: false
+      imports: [NgxIfServerDirective]
     })
     class TestDirectiveComponent {
-      @ViewChild(NgxIfServerDirective) public directive: NgxIfServerDirective;
+      @ViewChild(NgxIfServerDirective) public directive?: NgxIfServerDirective;
       public enabled = true;
     }
 
@@ -159,8 +157,7 @@ describe('NgxIfServerDirective', () => {
       } as unknown as jest.Mocked<NgxIfPlatformService>;
 
       fixture = TestBed.configureTestingModule({
-        imports: [NgxIfPlatformModule],
-        declarations: [TestDirectiveComponent],
+        imports: [NgxIfPlatformModule, TestDirectiveComponent],
         providers: [
           { provide: TemplateRef, useValue: templateRef },
           { provide: ViewContainerRef, useValue: viewContainer },
