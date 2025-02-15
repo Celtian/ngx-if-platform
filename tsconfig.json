@@ -1,27 +1,36 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "paths": {
+      "ngx-if-platform": [
+        "./projects/ngx-if-platform/src/public-api"
+      ]
+    },
+    "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
-    "esModuleInterop": true,
     "experimentalDecorators": true,
-    "module": "ES2022",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "lib": ["ES2022", "dom"],
-    "paths": {
-      "ngx-if-platform": ["dist/ngx-if-platform"],
-      "ngx-if-platform/*": ["dist/ngx-if-platform/*"]
-    },
-    "resolveJsonModule": true,
-    "useDefineForClassFields": false
+    "module": "ES2022",
+    "lib": [
+      "ES2022",
+      "dom"
+    ]
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictTemplates": true,
-    "strictInjectionParameters": true
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   }
 }

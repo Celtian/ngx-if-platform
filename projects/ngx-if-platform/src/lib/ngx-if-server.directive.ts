@@ -18,8 +18,8 @@ export class NgxIfServerDirective extends NgxIfAbstractDirective {
   }
 
   constructor(
-    protected templateRef: TemplateRef<any>,
-    protected viewContainer: ViewContainerRef,
+    protected override templateRef: TemplateRef<any>,
+    protected override viewContainer: ViewContainerRef,
     private platformService: NgxIfPlatformService
   ) {
     super(templateRef, viewContainer);
