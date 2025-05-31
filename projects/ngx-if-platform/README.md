@@ -14,7 +14,7 @@
 
 > Angular directive for conditional display based on platform
 
-> ✓ _Angular 19 compatible_
+> ✓ _Angular 20 compatible_
 
 Here's the [demo](http://celtian.github.io/ngx-if-platform/) or [stackblitz live preview](https://stackblitz.com/edit/ngx-if-platform) or [codesandbox live preview](https://codesandbox.io/s/ngx-if-platform-dgtck)
 
@@ -95,7 +95,8 @@ There are these directives: ngxIfBrowser, ngxIfServer, ngxIfWorkerApp, ngxIfWork
 
 | Angular   | ngx-if-platform | Install                      |
 | --------- | --------------- | ---------------------------- |
-| >= 18     | 3.x             | `yarn add ngx-if-platform`   |
+| >= 20     | 4.x             | `yarn add ngx-if-platform`   |
+| >= 18     | 3.x             | `yarn add ngx-if-platform@3` |
 | >= 14     | 2.x             | `yarn add ngx-if-platform@2` |
 | >= 12     | 1.x             | `yarn add ngx-if-platform@1` |
 | >= 5 < 13 | 0.x             | `yarn add ngx-if-platform@0` |
