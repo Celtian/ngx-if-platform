@@ -95,7 +95,8 @@ There are these directives: ngxIfBrowser, ngxIfServer, ngxIfWorkerApp, ngxIfWork
 
 | Angular   | ngx-if-platform | Install                      |
 | --------- | --------------- | ---------------------------- |
-| >= 18     | 3.x             | `yarn add ngx-if-platform`   |
+| >= 20     | 4.x             | `yarn add ngx-if-platform`   |
+| >= 18     | 3.x             | `yarn add ngx-if-platform@3` |
 | >= 14     | 2.x             | `yarn add ngx-if-platform@2` |
 | >= 12     | 1.x             | `yarn add ngx-if-platform@1` |
 | >= 5 < 13 | 0.x             | `yarn add ngx-if-platform@0` |
